@@ -28,3 +28,19 @@ function changeText(){
 
 but.addEventListener("click", changeText);
 
+//------------------------------------------------------------------------------------
+
+//1. find div
+//2. df changbggreen func
+//3. add func as evnt
+
+const butcon = document.querySelector(".button-container");
+
+function changeBGGreen(event){
+    //console.log(event.target)
+    if(event.target.tagName === "BUTTON"){
+        event.target.style.background="green";
+    }
+}
+
+butcon.addEventListener("click", changeBGGreen)
