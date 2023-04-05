@@ -43,4 +43,36 @@ function changeBGGreen(event){
     }
 }
 
-butcon.addEventListener("click", changeBGGreen)
+butcon.addEventListener("mouseover", changeBGGreen)
+
+// 2. define func to chaneg textcolor
+function changeTextColor(event){
+    console.log(event.target.textContent)//event = what was clicked on.
+    //if red but is clicked, textcolor should be red.
+    event.target.style.color = event.target.textContent;
+
+    //for adding css styles:
+    //event.target.classList.add(event.target.textContent)
+
+}
+
+//3 event listener
+butcon.addEventListener("click", changeTextColor)
+
+
+function addNewElements(){
+        //createelement for para and but
+        const purplebut = document.createElement("button");
+        const purppara = document.createElement("p");
+        //append child 
+        document.body.appendChild(purppara);
+        document.body.appendChild(purplebut);
+
+        purplebut.textContent = "pruple";
+        purppara.textContent = "sssssssssssssssssssssssssssssssssssssssssssssssssaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";        
+        //textcontent
+        purplebut.addEventListener("mouseover", changeBGGreen)
+
+}
+
+but.addEventListener("click", addNewElements)
